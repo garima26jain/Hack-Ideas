@@ -15,7 +15,9 @@ const Header = ({setView}) => {
     }
 
     const handleChange = (e) => {
+        console.log("e",e.target.value);
         setSortField(e.target.value)
+        setView(e.target.value)
     }
 
     const dataView = () => {
@@ -29,22 +31,22 @@ const Header = ({setView}) => {
             <div className="flex mx-2">
                 
             <select id="sort" 
-                            class="block py-2 mx-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500" 
-                            name="sort"
-                            value={sortField}
-                            onChange={handleChange}
-                        >
-                            <option value="">
-                                Sort by 
-                            </option>
-                            <option value="Likes">
-                                Likes
-                            </option>
-                            <option value="Date">
-                                Date 
-                            </option>
+                className="block py-2 mx-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500" 
+                name="sort"
+                value={sortField}
+                onChange={handleChange}
+            >
+                <option value="">
+                    Sort by 
+                </option>
+                <option value="likes">
+                    Likes
+                </option>
+                <option value="creationdate">
+                    Date 
+                </option>
 
-                        </select>
+            </select>
 
             <button className="border border-gray-300 ml-3 rounded-md px-5 py-2 hover:bg-blue-400 " onClick={addNewHack}>+ Add</button>
             </div>

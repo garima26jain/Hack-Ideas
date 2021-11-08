@@ -1,25 +1,31 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './App.css';
 import Container from './components/Container';
 import Header from './components/Header';
-import { data } from './dummydata';
+import { data }  from './dummydata';
 
 const App=()=> {
-  const [renderView, setRenderView] = useState(false)
   const [hackArr, setHackArr] = useState(data)
 
-  console.log("hackarr", hackArr);
+  const setView = (sortField) =>{
+    console.log("update the main comp");
 
-  // useEffect(() => {
-  //   const arr = localStorage.getItem('hacks')
-  //   setHackArr(arr);
-  // }, [renderView])
-
-  const setView=()=>{
-    console.log("added new");
-    setRenderView(true)
+    if(sortField){
+      if(sortField === "creationdate"){
+        const myData1=[].concat(hackArr).sort((a,b) => new Date(a[sortField]) - new Date(b[sortField]));
+        setHackArr(myData1)
+      }
+      else{
+        const myData = [].concat(hackArr).sort((a, b) =>{ 
+            return a[sortField] - b[sortField] })
+          setHackArr(myData)
+      }
+    }
+    else{
+      setHackArr(JSON.parse(localStorage.getItem('hacks')))
+    }
   }
-
+  
   return (
     <>
     <Header setView={setView}/>

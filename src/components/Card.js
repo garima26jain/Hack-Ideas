@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-const Card=({ title, desc, img, tag})=> {
+const Card=({ title, desc, img, tag, likes})=> {
 
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(likes)
     const [like, setLike] =  useState(false)
 
     const handleClick = () => {
@@ -12,7 +12,7 @@ const Card=({ title, desc, img, tag})=> {
 
     return (
         
-        <div class=" border-2 cursor-pointer rounded m-2 h-56 hover:shadow-2xl">
+        <div className=" border-2 cursor-pointer rounded m-2 h-56 hover:shadow-2xl">
             
                 <img src={img} alt="display img" className="object-fill w-full h-32"/>
                 <div className="px-4">
@@ -24,7 +24,7 @@ const Card=({ title, desc, img, tag})=> {
                     {like?
                     <button className="relative" >
                     {count >0 &&
-                        <span class="w-4 h-4 rounded-full absolute leading text-xs bg-blue-300 ">
+                        <span className="w-4 h-4 rounded-full absolute leading text-xs bg-blue-300 ">
                             {count}
                         </span>
                     }
@@ -34,12 +34,17 @@ const Card=({ title, desc, img, tag})=> {
                     </button>
                     :
                     <button onClick={handleClick}>
+                    {likes >0 &&
+                        <span className="w-4 h-4 rounded-full absolute leading text-xs bg-blue-300 ">
+                            {likes}
+                        </span>
+                    }
                     <svg xmlns="http://www.w3.org/2000/svg" className="h- w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                     </button>
                     }
-                <span class="px-4 py-1 m-2 my-1  text-base rounded-full text-green-600  bg-green-200 ">
+                <span className="px-4 py-1 m-2 my-1  text-base rounded-full text-green-600  bg-green-200 ">
                     {tag}
                 </span>
                 </div>
