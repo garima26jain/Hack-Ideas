@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/hackideas/static/css/main.c11d2f33.chunk.css",
+    "main.js": "/hackideas/static/js/main.0df008c8.chunk.js",
+    "main.js.map": "/hackideas/static/js/main.0df008c8.chunk.js.map",
+    "runtime-main.js": "/hackideas/static/js/runtime-main.3262d2de.js",
+    "runtime-main.js.map": "/hackideas/static/js/runtime-main.3262d2de.js.map",
+    "static/js/2.e6dc897b.chunk.js": "/hackideas/static/js/2.e6dc897b.chunk.js",
+    "static/js/2.e6dc897b.chunk.js.map": "/hackideas/static/js/2.e6dc897b.chunk.js.map",
+    "static/js/3.f6ae436e.chunk.js": "/hackideas/static/js/3.f6ae436e.chunk.js",
+    "static/js/3.f6ae436e.chunk.js.map": "/hackideas/static/js/3.f6ae436e.chunk.js.map",
+    "index.html": "/hackideas/index.html",
+    "static/css/main.c11d2f33.chunk.css.map": "/hackideas/static/css/main.c11d2f33.chunk.css.map",
+    "static/js/2.e6dc897b.chunk.js.LICENSE.txt": "/hackideas/static/js/2.e6dc897b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3262d2de.js",
+    "static/js/2.e6dc897b.chunk.js",
+    "static/css/main.c11d2f33.chunk.css",
+    "static/js/main.0df008c8.chunk.js"
+  ]
+}
